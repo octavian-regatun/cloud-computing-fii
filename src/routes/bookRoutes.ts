@@ -42,6 +42,15 @@ const bookRoutes = async (req: IncomingMessage, res: ServerResponse, pathname: s
       }
       break;
 
+    case 'PATCH':
+      if (id) {
+        await updateBook(req, res, id);
+      } else {
+        res.writeHead(400);
+        res.end(JSON.stringify({ error: 'Book ID is required' }));
+      }
+      break;
+
     case 'DELETE':
       if (id) {
         await deleteBook(req, res, id);

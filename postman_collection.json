@@ -114,6 +114,37 @@
 					"response": []
 				},
 				{
+					"name": "Patch Book",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Partially updated description\",\n    \"pageCount\": 185\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/books/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"books",
+								"1"
+							]
+						},
+						"description": "Partially update an existing book"
+					},
+					"response": []
+				},
+				{
 					"name": "Delete Book",
 					"request": {
 						"method": "DELETE",
