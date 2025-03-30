@@ -6,7 +6,7 @@ import categoryRoutes from './routes/categoryRoutes';
 import reviewRoutes from './routes/reviewRoutes';
 import bookCategoryRoutes from './routes/bookCategoryRoutes';
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 const server = http.createServer(async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
