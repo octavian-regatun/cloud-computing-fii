@@ -1,5 +1,4 @@
 import { IncomingMessage, ServerResponse } from 'http';
-import { URL } from 'url';
 import { 
   addCategoryToBook,
   removeCategoryFromBook,
@@ -13,9 +12,6 @@ const bookCategoryRoutes = async (req: IncomingMessage, res: ServerResponse, pat
   
   const bookId = bookCategoriesMatches ? parseInt(bookCategoriesMatches[1]) : null;
   const categoryId = categoryBooksMatches ? parseInt(categoryBooksMatches[1]) : null;
-
-  const baseURL = `http://${req.headers.host}`;
-  const url = new URL(req.url || '/', baseURL);
 
   switch (req.method) {
     case 'GET':
